@@ -1,0 +1,48 @@
+.home_page{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}.hero_area{
+    padding: 120px;
+}
+.hero_area >h1{
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+.hero_area >p{
+    font-weight: 200;
+    font-size: 1.4em;
+}
+.links{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    transition: all .3s;
+}
+.links p{
+    padding: 12px 20px;
+    background-color: #3425aa;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+.links p:first-child{
+    margin-right: 10px;
+    background-color: transparent;
+    color: #3425aa;
+    border: 2px solid #3425aa;
+}
+.links p:hover{
+    cursor: pointer;
+    background-color: #0c0065;
+}
+.links p:first-child:hover{
+    color: white;
+    border-color: #0c0065;
+}
+a{
+    all: unset;
+}

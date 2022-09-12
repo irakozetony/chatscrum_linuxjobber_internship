@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.form_container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+.form_container h2{
+    font-weight: 700;
+    margin-bottom: 16px;
+    font-size: 1.8em;
+}
+.form_container p{
+    font-weight: 200;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+.form_container p>a{
+    text-decoration: none;
+    color: #3425aa;
+    font-weight: 400;
+    transition: all .3s;
+}
+.form_container p>a:hover{
+    color: #0c0065;
+    cursor: pointer;
+}
+.input_container{
+    margin-bottom: 20px;
+}
+label{
+    display: block;
+    margin-bottom: 8px;
+}
+input,
+select{
+    width: 100%;
+    padding: 16px 12px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    transition: all .3s;
+}
+select{
+    background-color: transparent;
+}
+input:focus,
+select:focus{
+    border: 2px solid #3425aa;
+    outline: none;
+}
+input[type="submit"]{
+    background-color: #3425aa;
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    border-radius: 4px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .3s;
+}
+input[type="submit"]:hover{
+    background-color: #0c0065;
+}
+.error{
+    display: block;
+    color: #ef3256;
+    padding: 6px 4px;
+    margin-top: 2px;
+
+}
+.back_home{
+    display: inline-block;
+    margin-top: 20px;
+    cursor: pointer;
+    padding: 8px 12px;
+    border: 2px solid #0c0065;
+    border-radius: 4px;
+}
