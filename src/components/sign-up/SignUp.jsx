@@ -5,6 +5,7 @@ import {useForm} from 'react-hook-form';
 import {yupResolver} from '@hookform/resolvers/yup'
 import * as yup from 'yup';
 import {Link} from 'react-router-dom'
+import userData from '../static/data'
 
 function SignUp(){
     const validationSchema = yup.object().shape(
@@ -24,7 +25,17 @@ function SignUp(){
             resolver: yupResolver(validationSchema),
         });
 
-    const onSubmit = (data) => console.log(data)
+    const onSubmit = (data) => {
+        let user ={
+            fullname: data.full_name,
+            email: data.email,
+            password: data.password,
+            user_type: document.getElementById("user_type").value,
+        }
+        userData.push(user);
+        console.log(userData);
+        console.log("SignUp Successful");
+    }
     return(
         <div className="form_container">
             <h2>Sign up</h2>
@@ -33,7 +44,7 @@ function SignUp(){
                 {form_content.inputs.map((input, key)=>{
                     return(
                         <div key={key} className="input_container">
-                            <label htmlFor={input.name}>{input.label}</label>
+                            <label htmlFor={input.name} id={input.name}>{input.label}</label>
                             <input type={input.type} name={input.name} {...register(input.name)} />
                             <span className="error">{errors[input.name]?.message}</span>
                         </div>
@@ -41,7 +52,7 @@ function SignUp(){
                 })}
                 <div className="input_container">
                     <label htmlFor="user_type">User type</label>
-                    <select name="user_type">
+                    <select name="user_type" id="user_type">
                         <option value="developer">Developer</option>
                         <option value="owner">Owner</option>
                     </select>

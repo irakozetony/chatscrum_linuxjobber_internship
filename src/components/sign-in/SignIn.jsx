@@ -16,7 +16,9 @@ function SignIn(){
                     <label htmlFor="password">Password</label>
                     <input type="password" name="full_name"/>
                 </div>
-                <input type="submit" value="Log in"/>
+                <div className="input_container">
+                    <Link to="/scrumboard" id='login_button'>Log in</Link>
+                </div>
             </form>
             <p className="back_home"><Link to='/'>&laquo; Back home</Link></p>
         </div>

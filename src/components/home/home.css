@@ -28,6 +28,7 @@
     color: #fff;
     font-weight: 700;
     text-transform: capitalize;
+    transition: all .3s;
 }
 .links p:first-child{
     margin-right: 10px;
