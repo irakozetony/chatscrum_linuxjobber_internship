@@ -1,0 +1,12 @@
+.task{
+    padding: 12px 20px;
+    border-bottom: 1px solid #eee;
+    text-transform: capitalize;
+    transition: all .3s;
+    color: #2d2d2d;
+}
+.task:hover{
+    cursor: pointer;
+    background-color: #f6f6f6;
+    color: #000;
+}
