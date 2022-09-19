@@ -1,4 +1,4 @@
-const userTasks = [
+export const taskList = [
     {id: "one", item: "build chatscrum"},
     {id: "two", item: "improve my js"},
     {id: "three", item: "work on django project"},
@@ -6,4 +6,13 @@ const userTasks = [
     {id: "five", item: "code all day"}
 ]
 
-export default userTasks;
+export const taskColumns = {
+    "weekly":{
+        name: "Weekly goal",
+        items: taskList,
+    },
+    "daily":{
+        name: "Daily target",
+        items: [],
+    }
+}
